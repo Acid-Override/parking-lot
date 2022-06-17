@@ -45,7 +45,7 @@ export const Main = ({ slotsCount }) => {
       }
       setRows(rows);
     }
-    distributedSlotsToRows();
+    distributeSlotsToRows();
   }, [slotsCount, availableSlots]);
 
   const handleAddToParking = (carId) => {
@@ -76,7 +76,7 @@ export const Main = ({ slotsCount }) => {
           {row.map(({ slotNum, isBusy, numberPlate }) => (
             <ParkingSlot
               remove={handleRemoveFromParking}
-              key={slotNum + idex}
+              key={slotNum + idx}
               num={slotNum}
               isBusy={isBusy}
               numberPlate={numberPlate}

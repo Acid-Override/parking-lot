@@ -13,7 +13,7 @@ export const Landing = ({ triggerTransition, setParkingSlotsCount}) => {
 
   const onSubmit = (data) => {
     const parkingSize = Number(data.parkingSize);
-    if (parkingSize && typeof parkingSize === 'Number') {
+    if (parkingSize && typeof parkingSize === 'number') {
       setParkingSlotsCount(parkingSize);
     }
     triggerTransition();
